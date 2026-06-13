@@ -1,0 +1,45 @@
+baseURL: "https://abovesupport.com/"
+languageCode: "en-us"
+title: "Above"
+
+params:
+  description: "Above is a modern managed IT and strategic partner with deep Apple ecosystem expertise — for companies who want their infrastructure handled, not just maintained."
+  email: "hello@abovesupport.com"
+  phone: ""
+  address: ""
+  social:
+    linkedin: ""
+
+menu:
+  main:
+    - name: "Services"
+      url: "/#services"
+      weight: 10
+    - name: "Strategy"
+      url: "/#strategy"
+      weight: 20
+    - name: "Approach"
+      url: "/#approach"
+      weight: 30
+    - name: "About"
+      url: "/about/"
+      weight: 40
+    - name: "Contact"
+      url: "/#contact"
+      weight: 50
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - HTML
+  page:
+    - HTML
+
+minify:
+  tdewolff:
+    html:
+      keepWhitespace: false

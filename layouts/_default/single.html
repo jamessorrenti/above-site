@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ if .Params.eyebrow }}{{ .Params.eyebrow }}{{ else }}Above{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.lede }}<p class="section-lede">{{ .Params.lede }}</p>{{ end }}
+  </div>
+  <div class="horizon-line horizon-line-small" aria-hidden="true"></div>
+</section>
+
+<section class="section section-light">
+  <div class="container page-content">
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}

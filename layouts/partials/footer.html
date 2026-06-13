@@ -1,0 +1,50 @@
+<footer class="site-footer">
+  <div class="footer-wordmark" aria-hidden="true">
+    <img src="{{ "images/above-logo-lavender.webp" | relURL }}" alt="">
+  </div>
+
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-name">Above</span>
+      <p class="footer-tagline">Modern IT &amp; strategic partner, built around the Apple ecosystem.</p>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-col footer-col-site">
+        <h3>Site</h3>
+        <div class="footer-col-split">
+          <ul>
+            {{ range first 3 .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+          <ul>
+            {{ range after 3 .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
+          {{ if .Site.Params.phone }}<li><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></li>{{ end }}
+          {{ if .Site.Params.social.linkedin }}<li><a href="{{ .Site.Params.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>{{ end }}
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {{ now.Format "2006" }} Above. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
